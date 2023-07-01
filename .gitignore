@@ -1,0 +1,10 @@
+.ipynb_checkpoints
+models_clean
+models_clean_group
+models_clean_randgroup
+__pycache__
+!nam/README.md
+nam
+nam/__pycache__
+gam
+
