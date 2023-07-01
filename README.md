@@ -1,4 +1,5 @@
-# Supplementary material for the paper "A Game Theoretic Approach to Attributing Variance Reduction in the Presence of Asymmetric Relations"
+# Supplementary material for the paper "Theoretical Evaluation of Asymmetric Shapley Values for Root-Cause Analysis"
+
 
 This repository contains the code we used to run the experiments in our paper.
 
