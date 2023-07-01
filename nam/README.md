@@ -1,5 +1,3 @@
-The code will be uploaded by 2023-07-03 12:00 UTC at the latest.
-
 # NAM experiments
 
 ## Setup
@@ -17,12 +15,14 @@ See `nam-reproduce.ipynb`. Figures show single-variable functions of the model.
 ![Length of Stay](out/recidivism_4.png)
 ![Charge Degree](out/recidivism_5.png)
 
+There seems to be a very large randomness (see yellow lines) in the individual prediction functions. Dashed red lines signify 10 and 90 percentiles regarding the 20 trained functions. Blue is the average. (Same is visible in the original NAM paper).
+
 
 ## Single and double variable models
 
 See `nam-asv.ipynb`. Figures show single-variable functions of models trained only on that single variable.
 
-### Single variable:
+### Single variable models:
 
 ![Age](out/recidivism_solo_0.png)
 ![Race](out/recidivism_solo_1.png)
@@ -52,3 +52,7 @@ One line is two single-variable functions of the same model, trained on only tho
 ![pic](out/recidivism_double_12.png)
 ![pic](out/recidivism_double_13.png)
 ![pic](out/recidivism_double_14.png)
+
+# Interactions
+
+The code will be uploaded by 2023-07-03 12:00 UTC at the latest.
