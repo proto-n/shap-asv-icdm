@@ -54,5 +54,48 @@ One line is two single-variable functions of the same model, trained on only tho
 ![pic](out/recidivism_double_14.png)
 
 # Interactions
+See `nam-asv.ipynb`. We check the predictive power ($r^2$) of single- and two-variable models (towards the logits predicted by the full model.
 
-The code will be uploaded by 2023-07-03 12:00 UTC at the latest.
+## Individual $r^2$ values of predictors:
+
+|age|race|sex|priors_count|length_of_stay|c_charge_degree|
+|---|---|---|---|---|---|
+|0.043|0.036|0.017|0.045|0.005|0.029|
+
+These are very weak, because (as observed before), the probabilities are not well calibrated.
+
+## The $r^2$ values of two-variable models.
+
+||age|race|sex|priors_count|length_of_stay|c_charge_degree|
+|---|---|---|---|---|---|---|
+|age||0.227|0.173|0.625|0.031|0.188|
+|race|0.227||0.115|0.598|0.047|0.195|
+|sex|0.173|0.115||0.467|0.040|0.069|
+|priors_count|0.625|0.598|0.467||0.274|0.478|
+|length_of_stay|0.031|0.047|0.040|0.274||0.070|
+|c_charge_degree|0.188|0.195|0.069|0.478|0.070||
+
+Much more believable! Unfortunately, using these together with single variable models would result in huge interactions, which are an artifact of the uncalibrated probabilities.
+
+# Leave-on-out models
+
+See `nam-asv-leave-one-out.ipynb`. Let's see how different the GAM contributions are from ASV contributions when measuring contributions of variables as the last included one in ASV.
+
+### Simply plotting them side by side:
+
+![Age](out/leave_one_out_0.png)
+![Race](out/leave_one_out_1.png)
+![Gender](out/leave_one_out_2.png)
+![Priors Count](out/leave_one_out_3.png)
+![Length of Stay](out/leave_one_out_4.png)
+![Charge Degree](out/leave_one_out_5.png)
+
+### Directly on the same plot:
+
+![Age](out/leave_one_out_compare_0.png)
+![Race](out/leave_one_out_compare_1.png)
+![Gender](out/leave_one_out_compare_2.png)
+![Priors Count](out/leave_one_out_compare_3.png)
+![Length of Stay](out/leave_one_out_compare_4.png)
+![Charge Degree](out/leave_one_out_compare_5.png)
+
