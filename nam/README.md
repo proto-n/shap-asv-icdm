@@ -103,3 +103,38 @@ ASV contributions are marginalized (by mean) to the given dimension.
 ![Charge Degree](out/leave_one_out_compare_5.png)
 
 As we see, these are generally very similar, if a bit shifted (which does not affect variance). Very nice!
+
+# Regression with logits as targets
+
+See `nam-asv-logit-regression.ipynb`. We train regressor models to predict output logits of a full classifier model.
+
+## Individual $r^2$ values of predictors:
+
+|age|race|sex|priors_count|length_of_stay|c_charge_degree|
+|---|---|---|---|---|---|
+|0.199|0.218|0.101|0.631|0.091|0.209|
+
+
+## The $r^2$ values of two-variable models.
+
+||age|race|sex|priors_count|length_of_stay|c_charge_degree|
+|---|---|---|---|---|---|---|
+|age||0.331|0.272|0.850|0.253|0.332|
+|race|0.331||0.277|0.685|0.249|0.348|
+|sex|0.272|0.277||0.640|0.139|0.261|
+|priors_count|0.850|0.685|0.640||0.629|0.679|
+|length_of_stay|0.253|0.249|0.139|0.629||0.227|
+|c_charge_degree|0.332|0.348|0.261|0.679|0.227||
+
+## Interactions
+
+||age|race|sex|priors_count|length_of_stay|c_charge_degree|
+|---|---|---|---|---|---|---|
+|age||-0.086|-0.028|0.020|-0.038|-0.076|
+|race|-0.086||-0.042|-0.164|-0.060|-0.079|
+|sex|-0.028|-0.042||-0.091|-0.053|-0.048|
+|priors_count|0.020|-0.164|-0.091||-0.093|-0.161|
+|length_of_stay|-0.038|-0.060|-0.053|-0.093||-0.072|
+|c_charge_degree|-0.076|-0.079|-0.048|-0.161|-0.072||
+
+The interaction at priors_count x age seems a bit suspicious, cov is 0.00038584. Probably just variance.
