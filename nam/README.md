@@ -77,7 +77,7 @@ These are very weak, because (as observed before), the probabilities are not wel
 
 Much more believable! Unfortunately, using these together with single variable models would result in huge interactions, which are an artifact of the uncalibrated probabilities.
 
-# Leave-on-out models
+# Leave-one-out models and contributions as last feature
 
 See `nam-asv-leave-one-out.ipynb`. Let's see how different the GAM contributions are from ASV contributions when measuring contributions of variables as the last included one in ASV.
 
