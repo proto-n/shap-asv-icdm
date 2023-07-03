@@ -99,3 +99,4 @@ See `nam-asv-leave-one-out.ipynb`. Let's see how different the GAM contributions
 ![Length of Stay](out/leave_one_out_compare_4.png)
 ![Charge Degree](out/leave_one_out_compare_5.png)
 
+As we see, these are generally very similar, if a bit shifted (which does not affect variance). Very nice!
