@@ -81,6 +81,8 @@ Much more believable! Unfortunately, using these together with single variable m
 
 See `nam-asv-leave-one-out.ipynb`. Let's see how different the GAM contributions are from ASV contributions when measuring contributions of variables as the last included one in ASV.
 
+ASV contributions are marginalized (by mean) to the given dimension.
+
 ### Simply plotting them side by side:
 
 ![Age](out/leave_one_out_0.png)
