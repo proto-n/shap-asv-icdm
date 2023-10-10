@@ -57,7 +57,7 @@ One line is two single-variable functions of the same model, trained on only tho
 # Interactions
 See `nam-asv.ipynb`. We check the predictive power ($r^2$) of single- and two-variable models (towards the logits predicted by the full model.
 
-## Individual $r^2$ values of predictors:
+## Individual r² values of predictors:
 
 |age|race|sex|priors_count|length_of_stay|c_charge_degree|
 |---|---|---|---|---|---|
@@ -65,7 +65,7 @@ See `nam-asv.ipynb`. We check the predictive power ($r^2$) of single- and two-va
 
 These are very weak, because (as observed before), the probabilities are not well calibrated.
 
-## The $r^2$ values of two-variable models.
+## The r² values of two-variable models.
 
 ||age|race|sex|priors_count|length_of_stay|c_charge_degree|
 |---|---|---|---|---|---|---|
@@ -108,14 +108,14 @@ As we see, these are generally very similar, if a bit shifted (which does not af
 
 See `nam-asv-logit-regression.ipynb`. We train regressor models to predict output logits of a full classifier model.
 
-## Individual $r^2$ values of predictors:
+## Individual r² values of predictors:
 
 |age|race|sex|priors_count|length_of_stay|c_charge_degree|
 |---|---|---|---|---|---|
 |0.199|0.218|0.101|0.631|0.091|0.209|
 
 
-## The $r^2$ values of two-variable models.
+## The r² values of two-variable models.
 
 ||age|race|sex|priors_count|length_of_stay|c_charge_degree|
 |---|---|---|---|---|---|---|
